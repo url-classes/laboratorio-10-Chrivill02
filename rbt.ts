@@ -133,4 +133,27 @@ export class RBTree {
         // corregir inserción
         this.fixInsert(newNode);
     }
+    private searchByData(data: number): NodeRBT {
+        let testNode: NodeRBT = this.root;
+    
+        while (testNode !== this.leaf && data !== testNode.getData()) {
+            if (data < testNode.getData()) {
+                testNode = testNode.getLeftChild();
+            } else {
+                testNode = testNode.getRightChild();
+            }
+        }
+    
+        
+        return testNode;
+    }
+    
+    public search(numero:number): void{
+      let numeroEncontrar = this.searchByData(numero).getData();
+      if (numeroEncontrar != 0){
+        console.log("Dato encontrado: " + numeroEncontrar);
+      }else{
+        console.log("Dato no encontrado");
+      }
+    }
 }

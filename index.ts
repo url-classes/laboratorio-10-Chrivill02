@@ -8,4 +8,7 @@ myRBTree.insert(20);
 myRBTree.insert(30);
 myRBTree.insert(50);
 myRBTree.insert(45);
+//Imprimir inorden en forma ascendente
 myRBTree.printAll();
+//Buscar el valor
+myRBTree.search(10);
